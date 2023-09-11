@@ -3,10 +3,17 @@
 // 8 -> 2, 4, 6, 8
 //
 
-//---
 
+Console.Clear();
 
 Console.Write("Введите число: ");
-int n = int.Parse(Console.ReadLine()!);
-for (int i = 2; i <= n; i += 2)
-    Console.Write(i + " ");
+int n = int.Parse(Console.ReadLine() ?? "0");
+int num = 2;
+string result = "";
+while (num <= n)
+{
+    if (num <= n - 2) result += num + ", ";
+    else result += num + ".";
+    num += 2;
+}
+Console.WriteLine(result);
